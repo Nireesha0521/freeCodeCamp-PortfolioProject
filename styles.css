@@ -41,7 +41,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
 }
 
 .intro-text {
