@@ -306,22 +306,62 @@ a:hover::after {
   animation-delay: 0.6s;
 }
 
-@media screen and (max-width: 768px) {
-  section {
-    flex-direction: column-reverse;
+/* Tablet / Small Desktop */
+@media (min-width: 601ps), (max-width: 1024px) {
+
+  /* NAVBAR: Switch to vertical layout */
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  /* WELCOME: Center layout, scale down image/text */
+  #welcome-section {
+    flex-direction: column;
     text-align: center;
+    padding: 3rem 1.5rem;
   }
-  .intro-text, .profile-container {
-    flex: 1 1 100%;
-  }
-
-  .intro-text h1 {
-    font-size: 2.2rem;
-  }
-
   .profile-photo {
     width: 180px;
     height: 180px;
-    margin-top: 2rem;
+    margin: 20px auto 0;
+  }
+
+  /* PROJECTS: Full width cards */
+  .project {
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+
+  /* SKILLS / CERTS: Stack categories vertically */
+  .skills-category, .certification-list li {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  h1.section-title, #welcome-section h1 {
+    font-size: 2rem;
+  }
+  h2, #welcome-section h2 {
+    font-size: 1.3rem;
+  }
+  p, .project-content p {
+    font-size: 1rem;
+  }
+  .contact-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .contact-btn, .cert-link, .project-links a {
+    width: 80%;
+    margin: 0 auto;
   }
 }
